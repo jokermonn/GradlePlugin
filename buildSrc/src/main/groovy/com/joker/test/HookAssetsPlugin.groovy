@@ -47,7 +47,5 @@ class HookAssetsPlugin implements Plugin<Project> {
     //        }
     //      }
     //    }
-
-    project.tasks.getByName()
   }
 }
