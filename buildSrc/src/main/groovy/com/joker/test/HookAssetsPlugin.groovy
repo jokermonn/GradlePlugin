@@ -15,7 +15,7 @@ class HookAssetsPlugin implements Plugin<Project> {
           println variant.toString()
           variant.outputs.each { ApkVariantOutput variantOutput ->
             println variantOutput.toString()
-            if (variantOutput.name.equalsIgnoreCase("release")) {
+            if (variantOutput.name.contains("release")) {
               variantOutput.packageApplication.doFirst { PackageApplication task ->
                 project.copy {
                   from "${project.projectDir.absolutePath}/pic/test.png"
